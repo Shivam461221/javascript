@@ -1,0 +1,32 @@
+<script>
+    /*
+    if sallary >10000
+    hra=10%
+    ta=5%
+    da=3%
+
+    otherwise
+    hra=5%
+    ta=3%
+    */
+   var basicSallary = prompt("enter sallary")*1;
+   var ta, da=0, hra, gs;
+
+   if(basicSallary>=10000){
+    hra= (basicSallary*10)/100;
+    ta=(basicSallary*5)/100;
+    da=(basicSallary*3)/100;
+   }
+   else{
+    hra=(basicSallary*5)/100;
+    ta=(basicSallary*3)/100;
+   }
+
+   gs=basicSallary+hra+ta+da;
+   document.write("basic sallary : "+basicSallary);
+   document.write("<br/>hra : "+hra);
+   document.write("<br/>ta : "+ta);
+   da&&document.write("<br/>da : "+da);
+   document.write("<br/>gross sallary : "+ gs);
+    
+</script>
