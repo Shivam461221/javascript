@@ -1,0 +1,31 @@
+<script>
+    //calculator using Swirch case
+    var x=prompt("enter first number")*1;
+    var y = prompt("enter second number")*1;
+    document.write("First Num is : "+x);
+    document.write("<br/> Second Number is : "+y);
+
+    var expression  = prompt("enter + for addition, - for substraction, * for multiplication, / for division");
+    var answer;
+    switch(expression){
+        case "+": 
+        answer=x+y;
+        document.write("<br/> Sum");
+        break;
+        case "-": 
+        answer=x-y;
+        document.write("<br/> Substraction");
+        break;
+        case "*": 
+        answer=x*y;
+        document.write("<br/> Multiplication");
+        break;
+        case "/": 
+        answer=x/y;
+        document.write("<br/> Division");
+        break;
+        default: document.write("<br/> Something went wrong");
+    }
+
+    answer&&document.write("<br/> answer is "+answer);
+</script>
