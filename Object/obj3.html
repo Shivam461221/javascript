@@ -1,0 +1,21 @@
+<script>
+    var obj = {id:100, name:"shivam", age:23};
+    document.write(obj.id+" "+obj.name+" "+obj.age+"<br/>");
+
+    //creating copy of a object
+    var copy = obj;
+    document.write(copy.id+" "+copy.name+" "+copy.age+"<br/>");
+
+    delete obj.id;
+    //deleteing a copy object property will affect original object
+    document.write(obj.id+" "+obj.name+" "+obj.age+"<br/>");
+
+    //creating clone of a object
+    var clone = {...obj};
+    delete clone.age;
+    document.write(clone.id+" "+clone.name+" "+clone.age+"<br/>");
+    //deleteing a clone property does not affect real object
+    document.write(obj.id+" "+obj.name+" "+obj.age+"<br/>");
+
+
+</script>
