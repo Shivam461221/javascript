@@ -1,0 +1,17 @@
+<script>
+    function operation(a,b){
+        this.a =a;
+        this.b =b;
+        this.add = function(){
+            document.write(a+b);
+        }
+
+        this.sub = function(){
+            document.write("<br/>"+(a-b));
+        }
+    }
+
+    var obj = new operation(20,10);
+    obj.add();
+    obj.sub();
+</script>

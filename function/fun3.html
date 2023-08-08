@@ -1,0 +1,16 @@
+<script>
+    function f1(){
+        document.write("f1 is executed <br/>");
+    }
+    function f2(){
+        f3();
+        document.write("f2 is executed <br/>");
+        
+    }
+    function f3(){
+        f1();
+        document.write("f3 is executed <br/>");
+    }
+
+    f2();
+</script>

@@ -1,0 +1,21 @@
+<script>
+
+    //this refers current object
+    function Message(){
+        this.m1=function(){
+            document.write("m1 <br/>");
+        }
+        this.m2=function(){
+            document.write("m2 <br/>");
+        }
+        this.m3=function(){
+            document.write("m3<br/>");
+        }
+    }
+
+    var message = new Message();
+
+    message.m1();
+    message.m2();
+    message.m3();
+</script>
