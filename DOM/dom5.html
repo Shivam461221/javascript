@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <center>
+        <img id="main" src="images/java-logo-vert-blk.png" width="300px" height="300px" />
+        <br /><br />
+        <img onClick="swapImage(this)" id="first" src="images/html logo.png" width="100px" height="100px" />
+        &nbsp;&nbsp;&nbsp;
+        <img onClick="swapImage(this)" id="second" src="images/css logo.png" width="100px"
+            height="100px" />&nbsp;&nbsp;&nbsp;
+        <img onClick="swapImage(this)" id="third" src="images/bootstrap-tutorial.png" width="100px"
+            height="100px" />&nbsp;&nbsp;&nbsp;
+        <img onClick="swapImage(this)" id="fouth" src="images/angular logo.png" width="100px" height="100px" />
+    </center>
+    <script>
+        function swapImage(currentImage) {
+            var mainImage = document.getElementById("main");
+            var temp = mainImage.src;
+            mainImage.src = currentImage.src;
+            currentImage.src = temp;
+        }
+    </script>
+</body>
+
+</html>

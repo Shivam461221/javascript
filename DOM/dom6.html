@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            .left{
+                padding-left: 70px;
+                width: 20%;
+                display: flex;
+                float: left;
+                flex-direction: column;
+               border-right: 1px solid black;
+            }
+            .right{
+                padding: 30px;
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+               /* border: 1px solid black; */
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="left">
+            <img id="first" onclick="swapImage(this)" src="images/java-logo-vert-blk.png" width="150px" height="150px" /><br/>
+            <img id="second" onclick="swapImage(this)" src="images/angular logo.png" width="150px" height="150px" /><br/>
+            <img id="third" onclick="swapImage(this)" src="images/html logo.png" width="150px" height="150px" /><br/>
+            <img id="fourth" onclick="swapImage(this)" src="images/css logo.png" width="150px" height="150px" />
+        </div>
+        <div class="right">
+            <center>
+            <img id="main"  src="images/bootstrap-tutorial.png" width="500px" height="500px" />
+            <br/><br/>
+            <button onclick="changeSize(1)">+</button>
+            <button onclick="changeSize(0)">-</button>
+        </center>
+        </div>
+    
+        <script>
+            function swapImage(currentImage){
+                var mainImage=document.getElementById("main");
+                var temp = mainImage.src;
+                mainImage.src = currentImage.src;
+                currentImage.src=temp; 
+            }
+
+            function changeSize(n){
+                var obj = document.getElementById("main");
+                if(n){
+                    obj.width += 20;
+                    obj.height += 20;
+                }
+                else{
+                    obj.width -=20;
+                    obj.height -=20;
+                }
+            }
+        </script>
+    </body>
+</html>

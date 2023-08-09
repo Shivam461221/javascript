@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <center>
+            <img id="main" src="images/angular logo.png" width="200px" height="200px" />
+            <br/><br/>
+            <button onclick="increaseSize()">+</button>
+            <button onClick="decreseSize()">-</button>
+        </center>
+        <script>
+            function increaseSize(){
+                var imageObject = document.getElementById("main");
+                imageObject.width +=20;
+                imageObject.height +=20;
+            }
+
+            function decreseSize(){
+                var imageObject = document.getElementById("main");
+                imageObject.width -=20;
+                imageObject.height -=20;
+            }
+        </script>
+    </body>
+</html>

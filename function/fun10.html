@@ -1,0 +1,13 @@
+<script>
+    function addition(a,b, abc){
+        var c;
+        c=a+b;
+        document.write("<br/> addition is"+ c);
+        abc(c);
+    }
+
+    addition(5,6,function(n){
+        n%2 ? document.write("<br/> resultant value is odd"):
+        document.write("<br/> resultant value is even");
+    })
+</script>
