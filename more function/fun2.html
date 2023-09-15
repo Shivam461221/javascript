@@ -1,0 +1,26 @@
+<script>
+    console.log("at the start");
+    var eatingPizza=()=>{
+        setTimeout(()=>{
+            console.log("Pizza done...");
+        },2000);
+    };
+
+    var servicingCar =()=>{
+        setTimeout(()=>{
+            console.log("servicing done...");
+        }, 5000);
+    }
+
+    var meetingFriends=()=>{
+        setTimeout(()=>{
+            console.log("Meeting done...");
+        },3000);
+    }
+
+    eatingPizza();
+    servicingCar();
+    meetingFriends();
+    
+    console.log("At the end...")
+</script>

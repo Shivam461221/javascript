@@ -1,0 +1,14 @@
+<script>
+
+    function f1(x){
+        return function f2(y){
+            return function f3(z){
+                return x*y*z;
+            }
+        }
+    }
+
+    var result = f1(2)(3)(4);
+
+    document.write(result);
+</script>

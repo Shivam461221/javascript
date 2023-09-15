@@ -1,0 +1,28 @@
+<script>
+    var removeGarbage=()=>{
+        return new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve("garbage cleaned.....");
+            },5000);
+        });
+    };
+
+    var cleanRoom =()=>{
+        return new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve("room cleaned...");
+            },3000);
+        });
+    };
+
+    Promise.all([removeGarbage(),cleanRoom()]).then((result)=>{
+        console.log(result[0]);
+        console.log(result[1]);
+        console.log("I got a ice creame...");
+    }).catch(()=>{
+        console.log("I lost a ice creme...");
+    });
+    
+    
+    
+</script>

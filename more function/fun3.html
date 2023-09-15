@@ -1,0 +1,30 @@
+<script>
+    //callback hell
+
+    var first=(value, callback)=>{
+        console.log("Inside first : "+value);
+        callback(value+2);
+    };
+
+    var second=(value, callback)=>{
+        console.log("inside second : "+value);
+        callback(value+2);
+    };
+
+    var third = (value, callback)=>{
+        console.log("inside third : "+value);
+        callback(value+2);
+    };
+
+    var fourth = (value)=>{
+        console.log("inside fourth : "+value);
+    };
+
+    first(10,n=>{
+        second(n,(val)=>{
+            third(val,(val)=>{
+                fourth(val);
+            });
+        });
+    });
+</script>

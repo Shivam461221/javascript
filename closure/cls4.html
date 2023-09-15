@@ -1,0 +1,11 @@
+<script>
+    function f1(){
+        var x = 100;
+        console.log("inside f1 "+x);
+        return function f2(){
+            console.log("inside f2 "+x)
+        }
+    }
+
+    f1()();
+</script>

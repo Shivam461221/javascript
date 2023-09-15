@@ -1,0 +1,16 @@
+<script>
+    var operation=(value)=>{
+        return new Promise ((resolve, reject)=>{
+            if(value%2==0)
+              resolve("given number is even")
+            else 
+              reject("given number is odd");
+        });
+    }
+
+    operation(10).then((result)=>{
+        document.write(result);
+    }).catch((reject)=>{
+        document.write(reject);
+    });
+</script>

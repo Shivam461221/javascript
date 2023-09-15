@@ -1,0 +1,61 @@
+<script>
+    var firstName=()=>{
+        console.log("first name trigerred....");
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("Merry");
+            },3000);
+        });
+    }
+
+    var middleName=()=>{
+        console.log("middle name trigerred.....");
+        return new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve("John");
+            },5000);
+        });
+    }
+
+    var lastName=()=>{
+        console.log("Last name trigerred.....");
+        return new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve("Alex");
+            },8000);
+        });
+    }
+    //first way--------------------------------------------------------
+
+    // firstName().then(result=>{
+    //     console.log(result);
+    //     return middleName(result);
+    // }).then(result=>{
+    //     console.log(result);
+    //     return lastName(result);
+    // }).then(result=>{
+    //     console.log(result);
+    //     console.log("all promise resolved");
+    // }).catch(rejectionResult=>{
+    //     console.log("promise rejected"+rejectionResult);
+    // });
+
+    //second way-----------------------------------------------------------
+
+    // firstName().then((result)=>{
+    //     middleName().then((result)=>{
+    //         lastName().then((result)=>{
+    //             console.log("do if all promise resolved");
+    //         });
+    //     });
+    // });
+
+    //third way-----------------------------------------------------------u
+
+    Promise.all([firstName(),middleName(), lastName()])
+    .then((result)=>{
+        console.log(result[0]+" "+result[1]+" "+result[2]);
+    }).catch((rejectionResult)=>{
+        console.log(rejectionResult);
+    });
+</script>
