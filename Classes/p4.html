@@ -1,0 +1,40 @@
+<script>
+    //Inheritance :- When a object of a class acquire the properties of another class object
+    
+    //by using existing thing, to develop something new but there should be no change in existing thing
+    
+    class SJ5{
+        constructor(title, price ){
+            this.title= title;
+            this.price= price;
+        }
+
+        receivingCall(){
+            document.write("call received");
+        }
+
+        rejectingCall(){
+            document.write("<br/> call rejcted");
+        }
+
+        showInfo(){
+            document.write("<br/>Title :"+this.title+" Price : "+this.price);
+        }
+    }
+
+    class SJ7 extends SJ5{
+        constructor(title, price){
+            super(title, price);
+        }
+
+        camera(){
+            document.write("<br/> photo clicked.....");
+        }
+    }
+
+    var j7 = new SJ7("samsung", 12000);
+    j7.receivingCall();
+    j7.rejectingCall();
+    j7.showInfo();
+    j7.camera();
+</script>
